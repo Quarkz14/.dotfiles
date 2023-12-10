@@ -103,3 +103,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias conheadphones='bluetoothctl connect 14:3F:A6:A7:49:63'
+alias discheadphones='bluetoothctl disconnect 14:3F:A6:A7:49:63'
+alias lapmonitorOff='xrandr --output eDP --off'
+alias lapmonitorOn='xrandr --output eDP --auto'
+alias externalMonitor='xrandr --output HDMI-A-0 --auto --right-of eDP --primary'
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
