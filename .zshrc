@@ -111,3 +111,4 @@ alias externalMonitor='xrandr --output HDMI-A-0 --auto --right-of eDP --primary'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+alias config='/usr/bin/git --git-dir=/home/arman/.cfg/ --work-tree=/home/arman'
