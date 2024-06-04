@@ -27,7 +27,6 @@ local config = function()
                         'rust_analyzer', 
                         -- go
                         'gopls', 
-                        'golangci_lint_ls', 
                         -- lua
                         'lua_ls',
                         'html', 
@@ -60,8 +59,8 @@ local config = function()
     formatting = lsp_zero.cmp_format({details = false}),
     mapping = cmp.mapping.preset.insert({
       ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-      ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-      ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+      ['<Tab>'] = cmp.mapping.select_next_item(cmp_select),
+      ['<Enter>'] = cmp.mapping.confirm({ select = true }),
       ['<C-Space>'] = cmp.mapping.complete(),
     }),
     snippet = {
