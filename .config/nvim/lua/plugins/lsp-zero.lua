@@ -16,11 +16,9 @@ local config = function()
       vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
   end)
 
-  -- to learn how to use mason.nvim with lsp-zero
-  -- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md
-  require('mason').setup({})
-  require('mason-lspconfig').setup({
-    ensure_installed = {
+  
+		require('mason-tool-installer').setup {
+			ensure_installed = {
                         -- typescript
                         'tsserver', 
                         -- rust
@@ -31,7 +29,19 @@ local config = function()
                         'lua_ls',
                         'html', 
                         -- bash 
-                        'bashls'},
+                        'bashls'
+			},
+			auto_update = false,
+			run_on_start = true,
+			start_delay = 3000, -- 3 second delay
+			debounce_hours = 5,
+		}
+
+  -- to learn how to use mason.nvim with lsp-zero
+  -- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md
+  require('mason').setup({})
+  require('mason-lspconfig').setup({
+    ensure_installed = {},
     handlers = {
       lsp_zero.default_setup,
       lua_ls = function()
@@ -79,6 +89,7 @@ return {
       {'neovim/nvim-lspconfig'},             -- Required
       {'williamboman/mason.nvim'},           -- Optional
       {'williamboman/mason-lspconfig.nvim'}, -- Optional
+      {'"WhoIsSethDaniel/mason-tool-installer.nvim"'},
 
       -- Autocompletion
       {'hrsh7th/nvim-cmp'},     -- Required
