@@ -1,9 +1,9 @@
 local keymap = vim.keymap
 
 return {
-    'nvim-telescope/telescope.nvim', 
+  {  
+  'nvim-telescope/telescope.nvim', 
     tag = '0.1.5',
-    lazy = false,
     dependencies = { 'nvim-lua/plenary.nvim' },
     keys = {
       keymap.set("n", "<leader>fk", ":Telescope keymaps<CR>"),
@@ -13,4 +13,21 @@ return {
       keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>"),
       keymap.set("n", "<leader>fb", ":Telescope buffers<CR>"),
     }
+  },
+  {
+   "nvim-telescope/telescope-ui-select.nvim",
+    config = function()
+      require("telescope").setup({
+
+        extensions = {
+          ["ui-select"] = {
+            require("telescope.themes").get_dropdown {
+              -- even more opts
+            }
+          }
+        }
+      })
+      require("telescope").load_extension("ui-select")
+    end
+  },
 }

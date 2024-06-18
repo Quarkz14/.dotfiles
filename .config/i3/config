@@ -172,7 +172,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 default_border none
 
 #gaps between adjacent windows
-gaps inner 3px
+gaps inner 0px
 gaps outer 0px
 # resize window (you can also use the mouse for that)
 mode "resize" {
