@@ -21,19 +21,15 @@ return {
         capabilities = capabilities
       })
 
-      lspconfig.tsserver.setup({
-        capabilities = capabilities
-      })
-
       lspconfig.gopls.setup({
         capabilities = capabilities
       })
 
-      lspconfig.tailwindcss.setup({
+      lspconfig.html.setup({
         capabilities = capabilities
       })
 
-      lspconfig.html.setup({
+      lspconfig.templ.setup({
         capabilities = capabilities
       })
 

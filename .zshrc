@@ -110,7 +110,7 @@ alias lapmonitorOn='xrandr --output eDP --auto'
 alias externalMonitor='xrandr --output HDMI-A-0 --auto --right-of eDP --primary'
 export NVM_DIR="$HOME/.nvm"
 export PATH=$PATH:"$PATH:$(go env GOPATH)/bin"
-export PATH=$PATH:/user/bin/xc
+export PATH=$PATH:/usr/bin/xc
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
