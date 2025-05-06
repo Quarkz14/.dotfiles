@@ -3,6 +3,7 @@ if status is-interactive
 end
 
 source ~/.config/fish/alias.fish
+source ~/.config/fish/paths.fish
 # export PATH=$PATH:"$PATH:$(go env GOPATH)/bin"
 # export PATH=$PATH:/usr/bin/xc
 
