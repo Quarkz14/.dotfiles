@@ -1,0 +1,6 @@
+font-family = "FiraCode Nerd Font"
+gtk-wide-tabs = false
+gtk-single-instance = true
+window-decoration = false
+
+theme = "Kanagawa Dragon"
